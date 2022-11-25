@@ -11,6 +11,7 @@ export interface OpenAPISpec {
   externalDocs?: OpenAPIExternalDocumentation;
   'x-webhooks'?: OpenAPIPaths;
   webhooks?: OpenAPIPaths;
+  'x-tagGroups'?: OpenAPIXTagGroups;
 }
 
 export interface OpenAPIInfo {
@@ -295,3 +296,8 @@ export interface OpenAPILicense {
   url?: string;
   identifier?: string;
 }
+
+export type OpenAPIXTagGroups = Array<{
+  name: string;
+  tags: string[];
+}>;
